@@ -3,7 +3,7 @@ export interface Skill {
     name: string;
     icon: string;
 }
-
+ 
 // Skills array
 export const skills: Skill[] = [
     { name: 'Java', icon: '/svgs/skills/java.svg' },
@@ -20,10 +20,10 @@ export const skills: Skill[] = [
     { name: 'R', icon: '/svgs/skills/r.svg' },
     { name: 'SQL', icon: '/svgs/skills/sql.svg' },
     { name: 'Flask', icon: '/svgs/skills/flask.svg' },    
-    { name: 'Data Analytics', icon: '/svgs/skills/DA.svg' },   
+    { name: 'Data Analytics', icon: '/svgs/skills/DA.jpg' },   
     { name: 'GitHub', icon: '/svgs/skills/github.svg' },
     { name: 'Tailwind CSS', icon: '/svgs/skills/tailwind.svg' },
-    { name: 'Google Cloud', icon: '/svgs/skills/GC.svg' },
+    { name: 'Google Cloud', icon: '/svgs/skills/gc.svg' },
     { name: 'NumPy', icon: '/svgs/skills/numpy.svg' },
     { name: 'Pandas', icon: '/svgs/skills/pandas.svg' },
     { name: 'Deployment', icon: '/svgs/skills/deployment.svg' },
