@@ -6,7 +6,7 @@ const Hero = () => {
         <header className="flex relative w-full h-[75vh] items-center" id="#about">
             <Image
                 src="/banner.jpg"
-                alt="pfp"
+                alt="banner-image"
                 fill
                 className="animate animate-fade"
             />
@@ -14,7 +14,7 @@ const Hero = () => {
                
                 <h2 className="font-header text-section-header animate animate-fade-left
                 font-semibold ">Hello! I am Karthik</h2>
-                <p className="text-[#848484] animate animate-fade-right">I'm a Full Stack Developer who likes creating web applications and working on data analytics.</p>
+                <p className="text-[#848484] animate animate-fade-right">I&pos;m a Full Stack Developer who likes creating web applications and working on data analytics.</p>
                 <motion.button
                     type="button"
                     className="bg-[#121212] px-6 py-3 text-[1rem] font-semibold rounded-md text-white shadow-sm
@@ -36,15 +36,15 @@ const Hero = () => {
                     View my resume
                 </motion.button>
                 <div className="flex gap-2 animate-fade animate-once">
-                    <img src="/svgs/hero/linkedin.svg" className="hover:cursor-pointer hover:scale-105" width={40}
+                    <img src="/svgs/hero/linkedin.svg"  alt="linkedin"className="hover:cursor-pointer hover:scale-105" width={40}
                         onClick={
                             () => window.open("https://www.linkedin.com/in/karthik-bhat-pro", "_blank")
                         } />
-                    <img src="/svgs/hero/github.svg" className="hover:cursor-pointer hover:scale-105" width={30}
+                    <img src="/svgs/hero/github.svg"  alt="github"className="hover:cursor-pointer hover:scale-105" width={30}
                         onClick={
                             () => window.open("https://github.com/karthik-bha", "_blank")
                         } />
-                    <img src="/svgs/hero/mail.svg" className="hover:cursor-pointer hover:scale-105" width={50}
+                    <img src="/svgs/hero/mail.svg" alt="mail" className="hover:cursor-pointer hover:scale-105" width={50}
                         onClick={
                             () => window.open("mailto:karthik.bhat.pro@gmail.com", "_blank")
                         } />
