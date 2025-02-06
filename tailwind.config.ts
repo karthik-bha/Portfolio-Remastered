@@ -8,11 +8,24 @@ export default {
   ],
   theme: {
     extend: {
+      
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+       
       },
+      fontSize:{
+        "nav-header":"1.7rem",
+        "section-header":"2rem",
+        "content":"1.2rem",
+        "sub-heading":"1.3rem"
+      },
+      fontFamily:{
+        "header":["Montserrat", "serif"],
+        "content":["Inter", "serif"]
+      },
+     
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 } satisfies Config;
