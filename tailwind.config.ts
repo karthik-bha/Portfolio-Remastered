@@ -8,24 +8,26 @@ export default {
   ],
   theme: {
     extend: {
-      
-      colors: {
-       
+      colors: {},
+      fontSize: {
+        "nav-header": "1.7rem",
+        "section-header": "2rem",
+        "content": "1.2rem",
+        "sub-heading": "1.3rem",
       },
-      fontSize:{
-        "nav-header":"1.7rem",
-        "section-header":"2rem",
-        "content":"1.2rem",
-        "sub-heading":"1.3rem"
+      fontFamily: {
+        header: ["Montserrat", "serif"],
+        content: ["Inter", "serif"],
       },
-      fontFamily:{
-        "header":["Montserrat", "serif"],
-        "content":["Inter", "serif"]
-      },
-     
     },
   },
-  plugins: [
-    require('tailwindcss-animated')
+  safelist: [
+    "animate-fade-right",
+    "animate-fade-left",
+    "animate-fade-up",
+    "animate-fade-down",
+    "animate-fade",
+    "animate-slide-in", // Add any other animations you're using
   ],
+  plugins: [require("tailwindcss-animated")],
 } satisfies Config;
