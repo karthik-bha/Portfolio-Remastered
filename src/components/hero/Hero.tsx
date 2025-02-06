@@ -18,7 +18,7 @@ const Hero = () => {
                     Hello! I am Karthik
                 </h2>
                 <p className="text-[#848484] animate animate-fade-right">
-                    I'm a Full Stack Developer who likes creating web applications and working on data analytics.
+                    I&pos;m a Full Stack Developer who likes creating web applications and working on data analytics.
                 </p>
                 <motion.button
                     type="button"
