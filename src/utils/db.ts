@@ -1,4 +1,4 @@
-import type { Connection } from "mongoose";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import mongoose from "mongoose";
 
 const connectDB = async () => {

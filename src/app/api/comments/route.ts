@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import connectDB from "@/utils/db";
 import { NextResponse } from "next/server";
 import Comment from "@/models/Comment";
