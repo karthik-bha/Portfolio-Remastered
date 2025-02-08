@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import mongoose from "mongoose";
 
 const connectDB = async () => {
@@ -13,4 +14,4 @@ const connectDB = async () => {
   }
 };
 
-export default connectDB; // Ensure it is exported correctly
+export default connectDB; 
