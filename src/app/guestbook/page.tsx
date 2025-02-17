@@ -13,15 +13,26 @@ const Page = () => {
   const { data: session } = useSession();
   const [comments, setComments] = useState<Comment[]>([]);
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // Fetch existing comments from API
+
     const fetchComments = async () => {
-      const res = await fetch("/api/comments");
-      const data = await res.json();
-      setComments(data);
+      setLoading(true);
+      try {
+        const res = await fetch("/api/comments");
+        const data = await res.json();
+        setComments(data);
+      } catch (err) {
+        console.log(err);
+        alert("An error occurred while submitting your comment. Please try again.");
+      } finally {
+        setLoading(false);
+      }
     };
     fetchComments();
+
   }, []);
 
   const handleSubmit = async () => {
@@ -80,26 +91,33 @@ const Page = () => {
 
       {/* Comment Section */}
       <div className="h-[300px] p-4 border border-[#24292F] overflow-y-auto rounded-md">
-        {comments.map((comment) => (
-          <div key={comment._id} className="flex items-start gap-3 p-2 border-b border-[#24292F]">
-            {comment.image ? (
-              <img
-                src={comment.image}
-                alt={comment.name}
-                className="w-8 h-8 rounded-full"
-              />
-            ) : (
-              <div className="w-8 h-8 bg-[#24292F] rounded-full flex items-center justify-center text-white">
-                {comment.name.charAt(0).toUpperCase()}
-              </div>
-            )}
-            <div>
-              <p className="font-bold">{comment.name}</p>
-              <p>{comment.message}</p>
-            </div>
+        {loading ? (
+          <div className="text-white flex items-center animate-pulse">
+            Fetching comments...
           </div>
-        ))}
+        ) : (
+          comments.map((comment) => (
+            <div key={comment._id} className="flex items-start gap-3 p-2 border-b border-[#24292F]">
+              {comment.image ? (
+                <img
+                  src={comment.image}
+                  alt={comment.name}
+                  className="w-8 h-8 rounded-full"
+                />
+              ) : (
+                <div className="w-8 h-8 bg-[#24292F] rounded-full flex items-center justify-center text-white">
+                  {comment.name.charAt(0).toUpperCase()}
+                </div>
+              )}
+              <div>
+                <p className="font-bold">{comment.name}</p>
+                <p>{comment.message}</p>
+              </div>
+            </div>
+          ))
+        )}
       </div>
+
 
       {/* Show comment input only when logged in */}
       {session && (

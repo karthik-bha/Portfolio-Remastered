@@ -9,7 +9,10 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        "secondary":"#121212",
+        "primary":"#0a0a0a"
+      },
       fontSize: {
         "nav-header": "1.7rem",
         "section-header": "2rem",
