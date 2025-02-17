@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 // Initialize Resend using the API Key from environment variables
-const resend = new Resend(process.env.RESEND_API_KEY!);
+const resend = new Resend(process.env.RESEND_API_KEY! || "");
+
 
 // Define types for the expected request body
 interface ContactFormData {
