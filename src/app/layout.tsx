@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar/Navbar";
 
 
 export const metadata: Metadata = {
-  title: "Professional Portfolio",
+  title: "Karthik's portfolio",
   description: "Professional portfolio of karthik",
 };
 

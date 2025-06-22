@@ -7,9 +7,13 @@ const Hero = () => {
             {/* Background Image */}
             <Image
                 src="/banner.jpg"
-                alt="banner-image"
+                alt="Hero background image showcasing portfolio"
                 fill
-                className="animate animate-fade "
+                sizes="100vw"
+                priority
+                className="animate animate-fade"
+                quality={80}
+
             />
 
             {/* Content with Higher Z-Index */}

@@ -10,8 +10,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        "secondary":"#121212",
-        "primary":"#0a0a0a"
+        "secondary": "#121212",
+        "primary": "#0a0a0a",
+        "txt-color-1": "#ffffff",
+        "txt-color-2": "#848484"
       },
       fontSize: {
         "nav-header": "1.7rem",
@@ -31,7 +33,7 @@ export default {
     "animate-fade-up",
     "animate-fade-down",
     "animate-fade",
-    "animate-slide-in", 
+    "animate-slide-in",
   ],
   plugins: [require("tailwindcss-animated")],
 } satisfies Config;

@@ -48,7 +48,7 @@ const Skills = () => {
 
       {/* Skills Grid */}
       <motion.div
-        className="grid grid-cols-2 md:grid-cols-6 gap-4 m-4"
+        className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 m-4"
         initial="hidden"
         animate={hasAnimated ? "visible" : "hidden"}
         variants={{
@@ -64,7 +64,7 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className="flex gap-4 bg-[#282828] p-2 items-center"
+            className="flex gap-4 bg-[#282828] px-2 py-4 items-center"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
@@ -72,7 +72,7 @@ const Skills = () => {
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <img src={skill.icon} alt={skill.name} className="w-6 h-6" />
-            <p className="text-white mt-2 text-[1rem]">{skill.name}</p>
+            <p className="text-white text-[0.8rem] md:text-[1rem]">{skill.name}</p>
           </motion.div>
         ))}
       </motion.div>

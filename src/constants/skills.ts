@@ -3,13 +3,15 @@ export interface Skill {
     name: string;
     icon: string;
 }
- 
+
 // Skills array
 export const skills: Skill[] = [
     { name: 'Java', icon: '/svgs/skills/java.svg' },
     { name: 'Python', icon: '/svgs/skills/python.svg' },
-    { name: 'C++', icon: '/svgs/skills/cpp.svg' },
     { name: 'JavaScript', icon: '/svgs/skills/js.svg' },
+    { name: 'TypeScript', icon: '/svgs/skills/ts.svg' },
+    { name: 'SQL', icon: '/svgs/skills/sql.svg' },
+    { name: 'C++', icon: '/svgs/skills/cpp.svg' },
     { name: 'HTML', icon: '/svgs/skills/html.svg' },
     { name: 'CSS', icon: '/svgs/skills/css.svg' },
     { name: 'React', icon: '/svgs/skills/react.svg' },
@@ -18,9 +20,8 @@ export const skills: Skill[] = [
     { name: 'Express.js', icon: '/svgs/skills/express.svg' },
     { name: 'MongoDB', icon: '/svgs/skills/mongo.svg' },
     { name: 'R', icon: '/svgs/skills/r.svg' },
-    { name: 'SQL', icon: '/svgs/skills/sql.svg' },
-    { name: 'Flask', icon: '/svgs/skills/flask.svg' },    
-    { name: 'Data Analytics', icon: '/svgs/skills/DA.jpg' },   
+    { name: 'Flask', icon: '/svgs/skills/flask.svg' },
+    { name: 'Data Analytics', icon: '/svgs/skills/DA.jpg' },
     { name: 'GitHub', icon: '/svgs/skills/github.svg' },
     { name: 'Tailwind CSS', icon: '/svgs/skills/tailwind.svg' },
     { name: 'Google Cloud', icon: '/svgs/skills/gc.svg' },
