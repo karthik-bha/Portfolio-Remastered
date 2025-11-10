@@ -21,8 +21,12 @@ const Navbar = () => {
 
     return (
         <nav className=" p-7  bg-[#0a0a0a] max-w-[1200px] mx-auto"
+            role="header"
+            aria-label="Main Navigation"
+            aria-expanded={isOpen}
+            aria-controls="navigation"
         >
-            <div className="mx-2 text-center flex justify-between items-center rounded-md font-content">
+            <div className="mx-2 text-center flex justify-between items-center rounded-md font-content" role="navigation" >
                 <Link href="/#top" className="    bg-clip-text font-header  text-nav-header animate-fade-right">
                     <h1>Karthik Bhat</h1>
                 </Link>
@@ -30,9 +34,9 @@ const Navbar = () => {
                 {/* Hamburger Icon for Mobile */}
                 <div className="md:hidden">
                     {isOpen ?
-                        <img className="animate-fade-right" src="/svgs/navbar/cross.svg" width={30} onClick={handleClick} />
+                        <img className="animate-fade-right" src="/svgs/navbar/cross.svg" alt="close/cross" width={30} onClick={handleClick} />
                         :
-                        <img className="animate-fade-right" src="/svgs/navbar/hamburger.svg" width={30} onClick={handleClick} />
+                        <img className="animate-fade-right" src="/svgs/navbar/hamburger.svg" alt="hamburger" width={30} onClick={handleClick} />
                     }
                 </div>
 

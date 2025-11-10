@@ -22,8 +22,8 @@ export default {
         "sub-heading": "1.3rem",
       },
       fontFamily: {
-        header: ["Montserrat", "serif"],
-        content: ["Inter", "serif"],
+        header: ["var(--font-montserrat)", "system-ui", "serif"],
+        content: ["var(--font-inter)", "system-ui", "serif"],
       },
     },
   },
