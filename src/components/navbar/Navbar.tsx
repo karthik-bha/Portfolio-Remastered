@@ -21,12 +21,11 @@ const Navbar = () => {
 
     return (
         <nav className=" p-7  bg-[#0a0a0a] max-w-[1200px] mx-auto"
-            role="header"
             aria-label="Main Navigation"
             aria-expanded={isOpen}
             aria-controls="navigation"
         >
-            <div className="mx-2 text-center flex justify-between items-center rounded-md font-content" role="navigation" >
+            <div className="mx-2 text-center flex justify-between items-center rounded-md font-content">
                 <Link href="/#top" className="    bg-clip-text font-header  text-nav-header animate-fade-right">
                     <h1>Karthik Bhat</h1>
                 </Link>
