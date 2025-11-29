@@ -18,6 +18,21 @@ interface Project {
 const projects: Project[] = [
     {
         _id: 1,
+        name: "Nexus – Social Media Platform",
+        description: "A full-stack social platform featuring real-time messaging, microservices architecture, and optimized media handling.",
+        image: "/images/projects/nexus-preview.png",
+        link: "https://nexus-sandy-chi.vercel.app/",
+        live: true,
+        techStack: ["React", "Spring Boot", "Express", "Socket.io", "MongoDB", "Docker", "ImageKit"],
+        details: [
+            "Engineered a microservices architecture separating a Dockerized Spring Boot REST API (core data) from a lightweight Node.js/Socket.io service (real-time chat), isolating failure domains.",
+            "Implemented WebSocket-based real-time messaging and media optimization using ImageKit.io for profile images and post content.",
+            "Orchestrated production deployment across Vercel (Frontend) and Render (Backend), leveraging Docker containerization for environment consistency.",
+            "Designed a centralized JWT authentication strategy validating user sessions across Java and Node.js services."
+        ]
+    },
+    {
+        _id: 2,
         name: "Deliveroo",
         description: "A live full-stack application aiming to streamline food ordering processes.",
         image: "/images/projects/deliveroo.png",
@@ -34,7 +49,7 @@ const projects: Project[] = [
         ]
     },
     {
-        _id: 2,
+        _id: 3,
         name: "Get me a coffee",
         description: "A crowdfunding platform designed to help raise funds for various causes.",
         image: "/images/projects/getmeacofee.png",
@@ -48,7 +63,7 @@ const projects: Project[] = [
         ]
     },
     {
-        _id: 3,
+        _id: 4,
         name: "BookEasy",
         description: "A full-stack travel booking platform.",
         image: "/images/projects/bookeasy.png",
@@ -60,30 +75,29 @@ const projects: Project[] = [
             "Node.js and Express power the backend API for booking management.",
             "MongoDB Atlas stores user bookings details."
         ]
-    }, {
-        _id: 4,
+    },
+    {
+        _id: 5,
         name: "Old portfolio",
         description: "My old portfolio built with react and tailwindcss",
         image: "/images/projects/portfolio.png",
         link: "https://karthik-bha.github.io/portfolio/",
         live: true,
         techStack: ["React", "Tailwind CSS"],
-        details: [
-            "React and tailwind CSS were used for creating a responsive UI.",
-        ]
-    }, {
-        _id: 5,
+        details: ["React and tailwind CSS were used for creating a responsive UI."]
+    },
+    {
+        _id: 6,
         name: "FirstBench Frontend",
         description: "A pure frontend project built using react. Upon landing, navigate to dashboard to view.",
         image: "/images/projects/firstbench.png",
         link: "https://karthik-bha.github.io/Firstbench-Frontend/",
         live: true,
         techStack: ["React", "Tailwind CSS"],
-        details: [
-            "React and tailwind CSS were used for creating a responsive UI.",
-        ]
-    }, {
-        _id: 6,
+        details: ["React and tailwind CSS were used for creating a responsive UI."]
+    },
+    {
+        _id: 7,
         name: "American Sign Language Detection",
         description: "A full stack application which is used to detect the handsigns of the American Sign language using the VGG16 model",
         image: "/images/projects/asl.png",
@@ -94,9 +108,9 @@ const projects: Project[] = [
             "HTML, CSS and Javascript were used to develop frontend.",
             "python and Flask were used to develop backend."
         ]
-
-    }, {
-        _id: 7,
+    },
+    {
+        _id: 8,
         name: "College Management System",
         description: "A full stack MERN application which is used to manage college entities like students, teachers and admins",
         image: "/images/projects/cms.png",
@@ -108,9 +122,9 @@ const projects: Project[] = [
             "Node.js and Express power the backend API for college management.",
             "MongoDB stores user teacher, student and admin details."
         ]
-
-    }, {
-        _id: 8,
+    },
+    {
+        _id: 9,
         name: "Disease Predictor",
         description: "A full stack application used to predict diseases based on inputted symptoms",
         image: "/images/projects/dp.png",
@@ -123,7 +137,8 @@ const projects: Project[] = [
             "MySQL was used to store user data."
         ]
     }
-]
+];
+
 
 const Projects = () => {
     const { ref, hasAnimated } = useInViewOnce(0.3);
@@ -169,7 +184,10 @@ const Projects = () => {
                             />
                             <div>
                                 <p className="text-lg font-semibold">{items.name}</p>
-                                <p className="text-sm text-gray-400">{items.description}</p>
+                                <p className="text-sm text-gray-400 min-h-[48px] md:min-h-[79px] lg:min-h-[48px]">
+                                    {items.description}
+                                </p>
+
                             </div>
                             <div className="flex flex-wrap gap-2 mt-2 items-center">
                                 {items.techStack.slice(0, 3).map((tech) => (

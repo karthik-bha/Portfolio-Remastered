@@ -9,20 +9,21 @@ const experienceData = [
         company: "QuickIntell",
         duration: "April 2025 - June 2025",
         highlights: [
-            "Redesigned and rebuilt the frontend of oflisting.com, creating 9+ pages, ~6–7 complex interactive forms, and 10+ reusable components using Next.js and Tailwind CSS.",
-            "Integrated an AI-powered chatbot into oflisting.com to automate and streamline customer query resolution.",
-            "Contributed to the frontend of a medical e-commerce application, crafting 25+ mobile screens and 50+ reusable components with React Native (Expo), and implementing state management using Zustand.",
-            "Integrated 10+ client APIs, ensuring seamless collaboration with backend developers."
+            "Rebuilt the frontend of oflisting.com using Next.js and Tailwind CSS, delivering 9+ pages, 7 interactive forms, and 20+ reusable components, improving Lighthouse performance & SEO by 30% through responsive design and rendering optimizations.",
+            "Implemented an AI-powered chatbot to automate user queries and reduce manual support overhead.",
+            "Developed 25+ mobile screens and 50+ reusable UI components for a medical e-commerce application using React Native (Expo) with Zustand for scalable state management.",
+            "Integrated 10+ REST APIs, improving data consistency and feature delivery in collaboration with backend teams."
         ]
     },
     {
         role: "Full Stack Development Intern",
-        company: "Didwaniappstore",
-        duration: "Jan 2025 - April 2025",
+        company: "Didwaniaappstore",
+        duration: "Jan 2025 - March 2025",
         highlights: [
-            "Designed a role-based Restaurant & Office Management System supporting 15+ active users across 5 roles, enabling Super Admins to manage regions, Admins to oversee offices/restaurants, and Office users to manage employees and preferences.",
-            "Built 27 pages and ~20–25 reusable components, and engineered ~80–100 backend APIs in Next.js to support manual and automated ordering workflows, interactive dashboards, and role-based functionalities.",
-            "Developed an animated, interactive Wedding Invitation Platform with Framer Motion, featuring a categorized photo gallery and automated WhatsApp invitation sharing via Puppeteer, with scalable Google Drive media integration."
+            "Architected a role-based Restaurant & Office Management System supporting 15+ users across 5 access levels to streamline administrative workflows.",
+            "Delivered 27 pages, 20+ reusable components, and 90+ backend APIs in Next.js powering dashboards, automation flows, and role logic.",
+            "Automated recurring order workflows using a custom Express cron scheduler, reducing manual intervention.",
+            "Built an animated Wedding Invitation Platform with Framer Motion, automated WhatsApp sending via Puppeteer, and optional Google Drive media storage."
         ]
     }
 ];
