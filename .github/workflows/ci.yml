@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Typecheck, Lint & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build Next.js app
+        run: npm run build
+        env:
+          AUTH_SECRET: "ci-dummy-auth-secret-key-32-characters-min"
+          AUTH_GITHUB_ID: "ci-dummy-github-id"
+          AUTH_GITHUB_SECRET: "ci-dummy-github-secret"
+          NEXT_PUBLIC_CHATBOT_API_URL: "http://127.0.0.1:8000"
+          NEXT_PUBLIC_RECAPTCHA_SITE_KEY: "ci-dummy-recaptcha-key"

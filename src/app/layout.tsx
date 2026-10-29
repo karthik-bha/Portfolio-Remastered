@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
+import Chatbot from "@/components/chatbot/Chatbot";
 import { Inter, Montserrat } from 'next/font/google'
 
 
@@ -69,7 +70,7 @@ export default function RootLayout({
         </div>
         {/* <hr className="w-full border-none drop-shadow-[0_0_8px_rgba(128,0,128,0.5)] h-[2px] bg-gradient-to-r from-purple-400 via-purple-600 to-purple-900 "/> */}
         {children}
-
+        <Chatbot />
       </body>
     </html>
   );
