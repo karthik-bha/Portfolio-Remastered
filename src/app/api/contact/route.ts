@@ -6,9 +6,6 @@ import {
   setRateLimitHeaders,
 } from "@/utils/rateLimit";
 
-// Initialize Resend using the API Key from environment variables
-const resend = new Resend(process.env.RESEND_API_KEY! || "");
-
 // Rate limit config: 3 requests per 10 minutes per IP
 const CONTACT_RATE_LIMIT = {
   keyPrefix: "contact",
@@ -43,6 +40,14 @@ export async function POST(req: Request): Promise<NextResponse> {
     }
 
     // Check if the environment variables are set
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      return NextResponse.json(
+        { success: false, error: "Resend API key is not configured" },
+        { status: 500 }
+      );
+    }
+
     const recipientEmail = process.env.RECIPIENT_EMAIL;
     if (!recipientEmail) {
       return NextResponse.json(
@@ -50,6 +55,9 @@ export async function POST(req: Request): Promise<NextResponse> {
         { status: 500 }
       );
     }
+
+    // Initialize Resend lazily with the verified API key
+    const resend = new Resend(apiKey);
 
     // Send the email using Resend's API
     const data = await resend.emails.send({

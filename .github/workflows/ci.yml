@@ -38,3 +38,5 @@ jobs:
           AUTH_GITHUB_SECRET: "ci-dummy-github-secret"
           NEXT_PUBLIC_CHATBOT_API_URL: "http://127.0.0.1:8000"
           NEXT_PUBLIC_RECAPTCHA_SITE_KEY: "ci-dummy-recaptcha-key"
+          RESEND_API_KEY: "re_ci_dummy_resend_api_key"
+          RECIPIENT_EMAIL: "recipient@example.com"
