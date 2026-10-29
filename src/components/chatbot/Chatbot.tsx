@@ -575,16 +575,16 @@ const Chatbot: React.FC = () => {
   };
 
   return (
-    <div className="fixed z-50 bottom-5 right-5 sm:bottom-6 sm:right-6 pointer-events-auto">
-      {/* Floating Action Button (FAB) */}
-      <AnimatePresence>
-        {!isOpen && (
+    <div className="fixed z-50 bottom-5 right-5 sm:bottom-6 sm:right-6 pointer-events-none">
+      <AnimatePresence mode="wait">
+        {!isOpen ? (
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: 10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 10 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-            className="relative"
+            key="chatbot-fab"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
+            className="pointer-events-auto relative"
           >
             {/* Tooltip hint on hover */}
             <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 hidden sm:flex items-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
@@ -611,25 +611,22 @@ const Chatbot: React.FC = () => {
               </span>
             </motion.button>
           </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Chat Window */}
-      <AnimatePresence>
-        {isOpen && (
+        ) : (
           <motion.div
-            initial={{ opacity: 0, scale: 0.94, y: 16 }}
+            key="chatbot-window"
+            initial={{ opacity: 0, scale: 0.9, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.94, y: 16 }}
-            transition={{ type: "spring", damping: 28, stiffness: 340 }}
-            className={`flex flex-col bg-[#0a0a0a]/95 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/90 rounded-2xl overflow-hidden transition-all duration-300 ease-out font-content ${
+            exit={{ opacity: 0, scale: 0.9, y: 15 }}
+            transition={{ duration: 0.18, ease: "easeInOut" }}
+            style={{
+              maxWidth: "calc(100vw - 1.5rem)",
+              transformOrigin: "bottom right",
+            }}
+            className={`pointer-events-auto flex flex-col bg-[#0a0a0a]/95 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/90 rounded-2xl overflow-hidden font-content transition-[width,height] duration-200 ease-out ${
               isEnlarged
                 ? "w-[94vw] sm:w-[580px] md:w-[680px] h-[84vh] max-h-[760px]"
                 : "w-[92vw] sm:w-[390px] h-[550px] max-h-[82vh]"
             }`}
-            style={{
-              maxWidth: "calc(100vw - 1.5rem)",
-            }}
             role="dialog"
             aria-modal="true"
             aria-label="Karthik's Portfolio Assistant"
